@@ -1,2 +1,5 @@
 # rint_taeyang
-션립크스디
+
+> Background Image terms of use\
+https://kr.123rf.com/license.php?type=standard
+
