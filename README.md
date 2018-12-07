@@ -1,6 +1,6 @@
 # rint_taeyang
+removed personal infos
 
 > Background Image terms of use\
-removed personal infos
 https://kr.123rf.com/license.php?type=standard
 
