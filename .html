@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="utf-8">
+    <title>1학년 제 4소대 학생 목록</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <style>
+        /*1. 칠판느낌*/
+        /*2. 유사머터리얼*/
+        /*3. ???*/
+        /*4. PROFIT!!*/
+        body{
+            background: url("https://us.123rf.com/450wm/solarus/solarus1702/solarus170200027/71545510-yellow-check-diagonal-fabric-texture-background-seamless-pattern-vector-illustration-eps-10-.jpg?ver=6") repeat center center fixed;
+            /*background-size: cover;*/
+            /* Stock image terms and conditions : https://kr.123rf.com/license.php?type=standard */
+            height:100%;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        header,article,footer{
+            box-shadow: 2px 3px 0 1px #6d6d6d;
+        }
+        header {
+            background-color: #cbc26d;
+            border-radius: 23px 23px 0 0;
+            width:75vw;
+            height: auto;
+            margin: 0 auto;
+            /*font-family: 'East Sea Dokdo', cursive;*/
+            font-family: 'Yeon Sung', cursive;
+        }
+        article {
+            background-color: #fff59b;
+            width: 75vw;
+            height: 100vw;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #ffff6b;
+            border-radius: 0 0 23px 23px;
+            width:75vw;
+            height: 6vh;
+            margin: 0 auto 50px;
+            text-align: center;
+            font-size: 0.5em;
+            font-family: 'Roboto Mono', monospace;
+        }
+        h1 {
+            text-align: center;
+            padding:20px;
+         }
+        table{
+            margin:auto;border-collapse: collapse;
+            width : 50vw;
+            height: 50vh;
+        }
+        th{
+            border: 3px dotted #e4e65e;
+            background-color: #ffff89;
+        }
+        #stu{
+            text-align: center;
+            padding: 50px;
+            border:solid 2px #c6a700;
+            border-image-slice: 13 13 13 13; border-image-width: 13px 13px 13px 13px; border-image-outset: 13px 13px 13px 13px; border-image-repeat: stretch round; border-image-source: url("https://mdn.mozillademos.org/files/6013/border-image-4.png");
+            margin-top: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            width:50vw;
+            background-color: #fffde7;
+        }
+        #night_mode_button,#button2{
+            padding: 5px;
+            background-color: black;
+            color: white;
+        }
+        img#restrict{
+            filter:blur(5px)gray(1);
+        }
+        img#na{
+
+        }
+        img{
+            width:50px;
+            height:50px;
+            overflow: hidden;
+            filter: blur(5px);
+        }
+        img:hover{
+            filter:blur(1px);
+        }
+
+        .badge {
+            padding: 1px 9px 2px;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+            color: #ffffff;
+            background-color: #999999;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            border-radius: 9px;
+        }
+        .badge:hover {
+            color: #ffffff;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        #applepi{
+            background-color: white;
+            color: #a72a32;
+            border: 1px solid #a72a32;
+        }
+        #ana{
+            background-color: #000;
+        }
+        #edcan{
+            background-image: linear-gradient(to right,#72c8d0,#4d5a64);
+        }
+        #rg{
+            background-color: #2e2f58;
+        }
+        #zeropen{
+            background-color: #ebd244;
+            color: #000;
+        }
+        #iwop{
+            background-color: #5b9acb;
+        }
+        #layer7{
+            background-color: #000;
+            color: #989898;
+        }
+        #unifox{
+            color: #d4832b;
+            background-color: #a6d5e3;
+        }
+        #hush{
+            background-image: linear-gradient(to right,#bec890,#364450,#1c2a3b);
+            border: 1px dotted white;
+        }
+        #hellocoding{
+            color: white;
+            border: 1px dotted black;
+        }
+        #imy{
+            background-color: black;
+            border: 1px dotted white;
+            color: white;
+        }
+
+        /*.badge-error {*/
+            /*background-color: #b94a48;*/
+        /*}*/
+        /*.badge-error:hover {*/
+            /*background-color: #953b39;*/
+        /*}*/
+
+        /*.badge-warning {*/
+            /*background-color: #f89406;*/
+        /*}*/
+        /*.badge-warning:hover {*/
+            /*background-color: #c67605;*/
+        /*}*/
+
+        /*.badge-success {*/
+            /*background-color: #468847;*/
+        /*}*/
+        /*.badge-success:hover {*/
+            /*background-color: #356635;*/
+        /*}*/
+
+        /*.badge-info {*/
+            /*background-color: #3a87ad;*/
+        /*}*/
+        /*.badge-info:hover {*/
+            /*background-color: #2d6987;*/
+        /*}*/
+
+        /*.badge-inverse {*/
+            /*background-color: #333333;*/
+        /*}*/
+        /*.badge-inverse:hover {*/
+            /*background-color: #1a1a1a;*/
+        /*}*/
+        #ty{
+            display: none;
+        }
+        #thxdiv{
+            color: red;text-align: center;
+        }
+        #thxdiv:hover + #ty{
+            height: 50vh;
+            width: 50vw;
+            display: block;
+            filter: blur(0px);
+            margin: 0 auto;
+        }
+
+    </style>
+    <link rel="stylesheet" href="tablestyles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>1학년 4반 학생 목록</h1>
+    </header>
+    <article>
+
+        <span id="night_mode_button" onclick="nightMode()">야간모드</span>
+        <!-- <span id="button2" onclick="dosomething()">button2</span> -->
+        <br><br>
+        <table>
+        
+        <tr>
+            <th><span onclick="changeText(this)" id="1">10401<br></span></th>
+            <th><span onclick="changeText(this)" id="2">10402<br></span></th>
+            <th><span onclick="changeText(this)" id="3">10403<br></span></th>
+            <th><span onclick="changeText(this)" id="4">10404<br></span></th>
+            <th><span onclick="changeText(this)" id="5">10405<br></span></th>
+            <th><span onclick="changeText(this)" id="6">10406<br></span></th>
+        </tr>
+        <tr>
+            <th><span onclick="changeText(this)" id="7">10407<br></span></th>
+            <th><span onclick="changeText(this)" id="8">10408<br></span></th>
+            <th><span onclick="changeText(this)" id="9">10409<br></span></th>
+            <th><span onclick="changeText(this)" id="10">10410<br></span></th>
+            <th><span onclick="changeText(this)" id="11">10411<br></span></th>
+            <th><span onclick="changeText(this)" id="12">10412<br></span></th>
+        </tr>
+        <tr>
+            <th><span onclick="changeText(this)" id="13">10413<br></span></th>
+            <th><span onclick="changeText(this)" id="14">10414<br></span></th>
+            <th><span onclick="changeText(this)" id="15">10415<br></span></th>
+            <th><span onclick="changeText(this)" id="16">10416<br></span></th>
+            <th><span onclick="changeText(this)" id="17">10417<br></span></th>
+            <th><span onclick="changeText(this)" id="18">10418<br></span></th>
+        </tr>
+        <tr>
+            <th><span onclick="changeText(this)" id="19">10419<br></span></th>
+            <th><span onclick="changeText(this)" id="20">10420<br></span></th>
+            <th><span onclick="changeText(this)" id="21">10421<br></span></th>
+            <th><span onclick="changeText(this)" id="22">10422<br></span></th>
+            <th><span onclick="changeText(this)" id="23">10423<br></span></th>
+            <th><span onclick="changeText(this)" id="24">10424<br></span></th>
+        </tr>
+        <tr>
+            <th><span onclick="changeText(this)" id="25">10425<br></span></th>
+            <th><span onclick="changeText(this)" id="26">10426<br></span></th>
+            <th><span onclick="changeText(this)" id="27">10427<br></span></th>
+            <th><span onclick="changeText(this)" id="28">10428<br></span></th>
+            <th><span onclick="changeText(this)" id="??">104??<br></span></th>
+            <th><span onclick="changeText(this)" id="ff">104ff<br></span></th>
+        </tr>
+    </table>
+        <div id="stu">학생이름 또는 사진을 클릭 해 보세요.<br><br></div>
+        
+        <div id="thxdiv">여러분의 소중한 참여 정말 감사드립니다!</div>
+        <img id="ty" src="thankyou.png" alt="THANK YOU ALL SO MUCH <3">
+    </article>
+
+    <footer>no-Copyright ⓝ 2018-2018, 이성원, 박종관 and 김유빈. No rights reserved.</footer>
+
+    <script>
+        //특정 날짜가 되면 바뀜
+        let body = document.getElementsByTagName("body"); //test
+        let article = document.getElementsByTagName("article");
+        let year = new Date().getFullYear();
+        let AprilFools = new Date(year,4,1);
+        let todayDate = new Date();
+        let text = document.getElementById('stu');
+        let isNight = false;
+        let th = document.getElementsByTagName("th");
+        let header = document.getElementsByTagName("header");
+        let footer = document.getElementsByTagName("footer");
+        if(AprilFools.setHours(0,0,0,0) === todayDate.setHours(0,0,0,0)) {
+            body.style.backgroundColor = "black";
+            //load html
+        }
+        //야간모드
+        nightMode = function(){
+            /*
+                1.색을 어둑어둑하게 바꾸기 (노랑색계열)
+                2.어둑어둑했던 것들은 전부 발근발근한 색으로
+                3.다시 클릭하면 반대로 해보리기
+            */
+            if(!isNight){
+                text.style.backgroundColor = "black";
+                text.style.color="white";
+                text.style.backgroundColor="#333333";
+                article[0].style.backgroundColor="#666666";
+                article[0].style.boxShadow="2px 3px 0 1px #cccccc";
+                footer[0].style.backgroundColor="#666666";
+                footer[0].style.boxShadow="2px 3px 0 1px #cccccc";
+                header[0].style.backgroundColor="#666666";
+                header[0].style.boxShadow="2px 3px 0 1px #cccccc";
+                header[0].style.color="white";
+                for(let i=0;i<th.length;i++){
+                    th[i].style.backgroundColor="#999999";
+                }
+                body[0].style.filter = "gray(50px)";
+                body[0].style.background="url('Back_gray.PNG') repeat center center fixed";
+                isNight = true;
+            }
+            else{
+                isNight = false;
+                text.style.backgroundColor = "black";
+                text.style.color="black";
+                text.style.backgroundColor="#fffde7";
+                article[0].style.backgroundColor="#fff59b";
+                article[0].style.boxShadow="2px 3px 0 1px #6d6d6d";
+                footer[0].style.backgroundColor="#ffff6b";
+                footer[0].style.boxShadow="2px 3px 0 1px #6d6d6d";
+                header[0].style.backgroundColor="#cbc26d";
+                header[0].style.boxShadow="2px 3px 0 1px #6d6d6d";
+                header[0].style.color="black";
+                for(let i=0;i<th.length;i++){
+                    th[i].style.backgroundColor="#ffff89";
+                }
+                body[0].style.filter = "gray(0)";
+                body[0].style.background="url('https://us.123rf.com/450wm/solarus/solarus1702/solarus170200027/71545510-yellow-check-diagonal-fabric-texture-background-seamless-pattern-vector-illustration-eps-10-.jpg?ver=6') repeat center center fixed";
+            }
+        };
+
+        let changeText = function(e){
+            //더줄일방법 : 각 학생마다 문서분리?
+            switch(e.id){
+                case "1": text.innerHTML = "";break;
+
+                case "2": text.innerHTML = "";break;
+
+                case "3": text.innerHTML = "";break;
+
+                case "4": text.innerHTML = "";break;
+
+                case "5": text.innerHTML = "";break;
+
+                case "6": text.innerHTML = "";break;
+
+                case "7": text.innerHTML = "";break;
+
+                case "8": text.innerHTML = "";break;
+
+                case "9": text.innerHTML = "";break;
+
+                case "10": text.innerHTML = "";break;
+
+                case "11": text.innerHTML = "";break;
+
+                case "12": text.innerHTML = "";break;
+
+                case "13": text.innerHTML = "";break;
+
+                case "14": text.innerHTML = "";break;
+
+                case "15": text.innerHTML = "";break;
+
+                case "16": text.innerHTML = "";break;
+
+                case "17": text.innerHTML = "";break;
+
+                case "18": text.innerHTML = "";break;
+
+                case "19": text.innerHTML = ""; break;
+
+                case "20": text.innerHTML = "";break;
+
+                case "21": text.innerHTML = "";break;
+
+                case "22": text.innerHTML = "";break;
+
+                case "23": text.innerHTML = "";break;
+
+                case "24": text.innerHTML = "";break;
+
+                case "25": text.innerHTML = "";break;
+
+                case "26": text.innerHTML = "";break;
+
+                case "27": text.innerHTML = "";break;
+
+                case "28": text.innerHTML = "";break;
+
+                case "??": text.innerHTML = "";break;
+                    
+                case "ff": text.innerHTML = "";break;
+            }
+        }
+     
+    </script>
+</body>
+</html>
